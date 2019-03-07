@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 | There are three reserved routes:
 |
-|	$route['default_controller'] = 'welcome';
+|	$route['default_controller'] = 'users';
 |
 | This route indicates which controller class should be loaded if the
 | URI contains no data. In the above example, the "welcome" class
@@ -49,9 +49,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'users';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
 
 //custom
-$route['api/posts/(:num)/edit'] = "api/posts/edit/$1";
+$route['posts/(:num)/edit'] 	= "posts/edit/$1";
+$route['posts/(:num)/delete'] = "posts/delete/$1";
+$route['posts/(:num)'] 			  = "posts/$1";
